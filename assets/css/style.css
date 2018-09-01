@@ -1,7 +1,49 @@
-h1, h3{
+h1, h3, h2{
     text-align:center;
 }
 
 #questionWorkingArea{
     margin:auto;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h2{
+    padding-top:10px;
+    padding-bottom: 10px;
+}
+
+
+@media only screen and (min-width: 768px){
+    #stats {
+    position: absolute;
+    top:50%; 
+    height:50%; 
+    margin-top:-45%;
+    }
+}
+
+@media only screen and (min-width: 992px){
+    #stats {
+    position: absolute;
+    top:50%; 
+    height:50%; 
+    margin-top:-25%;
+    }
+}
+
+.table thead th{
+    border-top:none;
+}
+
+#questionTitleDiv{
+    border-bottom:  2px solid #dee2e6;
+}
+
+#questionWorkingArea{
+    display: none;
 }

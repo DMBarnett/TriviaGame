@@ -27,53 +27,92 @@
         <hr>
     </div>
     <div class="container">
-        <div class="row" id="questionWorkingArea">
+        <div class="row" id="openingPage">
             <div class="col-12">
-                <div id="questionTitle">
-                    <h3>Filler Text</h3>
+                <h3>This is a timed trivia quiz</h3>
+            </div>
+            <div class="col-12">
+                <div class="row">
+                    <div class="col-12 col-md-4 buttons QsetButton" id="firstQset">
+                        <button type="button" class="btn btn-outline-dark">First Option</button>
+                    </div>
+                    <div class="col-12 col-md-4 buttons QsetButton" id="secondQset">
+                        <button type="button" class="btn btn-outline-dark">Second Option</button>
+                    </div>
+                    <div class="col-12 col-md-4 buttons QsetButton" id="thirdQset">
+                        <button type="button" class="btn btn-outline-dark">Third Option</button>
+                    </div>
                 </div>
+            </div>
+        </div>
+    </div>
+    <div class="container" id="questionWorkingArea">
+        <div class="row">
+            <div class="col-12" id="questionTitleDiv">
+                <h3 id="questionTitle">Filler Text</h3>
             </div>
             <div id="tableArea" class="col-md-8">
                 <table class="table">
                     <thead>
                         <tr>
-                            <th scope="col" colspan="3">This is the space for the question itself, what the student will look at</th>
+                            <th scope="col" colspan="3" id="question">This is the space for the question itself, what the student will
+                                look at</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
                             <th scope="row">1.</th>
-                            <td>Choice here</td>
+                            <td id="answerText0">Choice here</td>
                             <td>
                                 <div class="radio">
-                                    <label><input type="radio" id='first'></label>
+                                    <label><input type="radio" id='first' name="answerBox0" value="foofighters">random</label>
                                 </div>
                             </td>
                         </tr>
                         <tr>
                             <th scope="row">2.</th>
-                            <td>Choice here</td>
+                            <td id="answerText1">Choice here</td>
                             <td>
                                 <div class="radio">
-                                    <label><input type="radio" id='second'></label>
+                                    <label><input type="radio" id='second' name="answerBox"></label>
                                 </div>
                             </td>
                         </tr>
                         <tr>
                             <th scope="row">3.</th>
-                            <td>Choice here</td>
+                            <td id="answerText2">Choice here</td>
                             <td>
                                 <div class="radio">
-                                    <label><input type="radio" id='third'></label>
+                                    <label><input type="radio" id='third' name="answerBox"></label>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">4.</th>
+                            <td id="answerText3">Choice here</td>
+                            <td>
+                                <div class="radio">
+                                    <label><input type="radio" id='fourth' name="answerBox"></label>
                                 </div>
                             </td>
                         </tr>
                     </tbody>
                 </table>
+                <div class="row">
+                    <div class="col-md-8 col-0"></div>
+                    <div class="col-12 col-md-4 buttons" id="submitButton">
+                        <button type="button" class="btn btn-outline-dark">Submit</button>
+                    </div>
+                </div>
             </div>
-            <div class="col-md-4">
-                <div>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+            <div class="col-md-4 col-12">
+                <div class="row" id="stats">
+                    <div class="col-12">
+                        <h2>Time remaining: <span id="display">00:00</span></h2>
+                    </div>
+                    <div class="col-12">
+                        <h2>Score: <span id="score">00</span>/<span id="possible">00</span></h2>
+                    </div>
                 </div>
             </div>
         </div>
