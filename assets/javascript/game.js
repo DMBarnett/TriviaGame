@@ -6,6 +6,7 @@ $(document).ready(function(){
     var score = 0;
     var chosenQuestionSet ="";
     var timeRemaining = 0;
+    var intervalId;
     var questionSets = {
         firstQset:[
             "Title of first question set",
@@ -105,7 +106,6 @@ $(document).ready(function(){
         $("#questionTitle").html(questionSets[this.id][0]);
         chosenQuestionSet = this.id;
         fillInQuestion();
-        setInterval(timer(), 1000);
     })
 
     function fillInQuestion() {
@@ -123,16 +123,58 @@ $(document).ready(function(){
         questionNumber++;
     }
     
+    function run(){
+        intervalId = setInterval(decrement, 1000);
+    }
+    
+    function decrement() {
+        timeRemaining--;
+        if (timeRemaining < 10) {
+            var seconds = "0" + timeRemaining;
+            $("#display").text(seconds);
+        }else{
+            $("#display").text(timeRemaining);
+        }
+        if(timeRemaining === 0){
+            clearInterval(intervalId);
+            updateScore();
+        }
+    }
+
+    function stop() {
+        clearInterval(intervalId);
+    }
+
+
     function updateScore(){
         clearInterval();
         if(answerBool){
             score++;
-            $("#score").html(score);
-            $("#possible").html(questionNumber-1);
+            if (score < 10) {
+                var scoreUpdate = "0" + score;
+                $("#score").text(scoreUpdate);
+                console.log(scoreUpdate);
+            }else{
+                $("#score").text(score);
+            }
+            if (questionNumber-1 < 10) {
+                var possibleUpdate = "0" + (questionNumber-1);
+                console.log(possibleUpdate);
+                $("#possible").text(possibleUpdate);
+            }else{
+                $("#possible").text(questionNumber-1);
+            }
+
             fillInQuestion();
             answerBool = false;
         }else{
-            $("#possible").html(questionNumber-1);
+            if (questionNumber-1 < 10) {
+                var possibleUpdate = "0" + (questionNumber-1);
+                console.log(possibleUpdate);
+                $("#possible").text(possibleUpdate);
+            }else{
+                $("#possible").text(questionNumber-1);
+            };
             fillInQuestion();
         }
     }
@@ -153,23 +195,6 @@ $(document).ready(function(){
             $(working).prop("checked", false);
         });
     });
-    function run(){
-        
-    }
     
-    function timer(){
-        timeRemaining--;
-        if (timeRemaining < 10) {
-            var seconds = "0" + timeRemaining;
-            $("#display").text(seconds);
-        }else{
-            $("#display").text(timeRemaining);
-        }
-        if(timeRemaining === 0){
-            clearInterval(theClock)
-            updateScore();
-            
-        }
-    };
 
 })
