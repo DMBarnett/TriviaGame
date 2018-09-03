@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Timed Trivia Game</title>
     <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/font-awesome-4.7.0/css/font-awesome.min.css">
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
@@ -65,7 +66,7 @@
                             <td id="answerText0">Choice here</td>
                             <td>
                                 <div class="radio">
-                                    <label><input type="radio" id='first' name="answerBox0" value="foofighters">random</label>
+                                    <label><input type="radio" id='first' name="answerBox" class="answerRadio" value="foofighters"></label>
                                 </div>
                             </td>
                         </tr>
@@ -74,7 +75,7 @@
                             <td id="answerText1">Choice here</td>
                             <td>
                                 <div class="radio">
-                                    <label><input type="radio" id='second' name="answerBox"></label>
+                                    <label><input type="radio" id='second' name="answerBox" class="answerRadio" value="eminem"></label>
                                 </div>
                             </td>
                         </tr>
@@ -83,7 +84,7 @@
                             <td id="answerText2">Choice here</td>
                             <td>
                                 <div class="radio">
-                                    <label><input type="radio" id='third' name="answerBox"></label>
+                                    <label><input type="radio" id='third' name="answerBox" class="answerRadio" value="johnDenver"></label>
                                 </div>
                             </td>
                         </tr>
@@ -92,23 +93,17 @@
                             <td id="answerText3">Choice here</td>
                             <td>
                                 <div class="radio">
-                                    <label><input type="radio" id='fourth' name="answerBox"></label>
+                                    <label><input type="radio" id='fourth' name="answerBox" class="answerRadio" value="tylerChilders"></label>
                                 </div>
                             </td>
                         </tr>
                     </tbody>
                 </table>
-                <div class="row">
-                    <div class="col-md-8 col-0"></div>
-                    <div class="col-12 col-md-4 buttons" id="submitButton">
-                        <button type="button" class="btn btn-outline-dark">Submit</button>
-                    </div>
-                </div>
             </div>
             <div class="col-md-4 col-12">
                 <div class="row" id="stats">
                     <div class="col-12">
-                        <h2>Time remaining: <span id="display">00:00</span></h2>
+                        <h2>Time remaining: 00:<span id="display">00</span></h2>
                     </div>
                     <div class="col-12">
                         <h2>Score: <span id="score">00</span>/<span id="possible">00</span></h2>
