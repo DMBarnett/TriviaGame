@@ -47,3 +47,15 @@ h2{
 #questionWorkingArea{
     display: none;
 }
+
+.openSpacing{
+    margin: 5px;
+}
+
+.formSpacing{
+    margin:8px;
+}
+
+.openAlign{
+    text-align: center;
+}

@@ -7,11 +7,14 @@ $(document).ready(function(){
     var chosenQuestionSet ="";
     var timeRemaining = 0;
     var intervalId;
+    var submit = false;
+    var firstName = "";
+    var lastName = "";
     var questionSets = {
         firstQset:[
-            "Title of first question set",
+            "History of the United States",
             {
-                question:"What does the fox say?",
+                question:"?",
                 a1:"Wonk",
                 a2:"Flibbth",
                 a3:"Moo",
@@ -100,12 +103,29 @@ $(document).ready(function(){
         ],    
     }
 
+    $("#submit").click(function(){
+        if($("#firstName").value == "" || $("#lastName").value == ""){
+            alert("Please enter your name.");
+            return;
+        }
+        var working = $("#firstName");
+        firstName = working[0].value;
+        working = $("#lastName");
+        lastName = working[0].value;
+        submit = true;
+        $("#firstQset").prop("disabled", false);
+        $("#secondQset").prop("disabled", false);
+        $("#thirdQset").prop("disabled", false);
+    })
+
     $(".QsetButton").click(function(){
-        $("#openingPage").hide();
-        $("#questionWorkingArea").show();
-        $("#questionTitle").html(questionSets[this.id][0]);
-        chosenQuestionSet = this.id;
-        fillInQuestion();
+        if(submit){
+            $("#openingPage").hide();
+            $("#questionWorkingArea").show();
+            $("#questionTitle").html(questionSets[this.id][0]);
+            chosenQuestionSet = this.id;
+            fillInQuestion();
+        }
     })
 
     function fillInQuestion() {

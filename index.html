@@ -32,18 +32,25 @@
             <div class="col-12">
                 <h3>This is a timed trivia quiz</h3>
             </div>
-            <div class="col-12">
+            <div class="col-6">
                 <div class="row">
-                    <div class="col-12 col-md-4 buttons QsetButton" id="firstQset">
-                        <button type="button" class="btn btn-outline-dark">First Option</button>
-                    </div>
-                    <div class="col-12 col-md-4 buttons QsetButton" id="secondQset">
-                        <button type="button" class="btn btn-outline-dark">Second Option</button>
-                    </div>
-                    <div class="col-12 col-md-4 buttons QsetButton" id="thirdQset">
-                        <button type="button" class="btn btn-outline-dark">Third Option</button>
+                    <div class="openAlign col-12 buttons">
+                        <div class="form-group">
+                            <input type="name" class="info formSpacing" placeholder="First Name" id="firstName">
+                            <br>
+                            <input type="name" class="info formSpacing" placeholder="Last Name" id="lastName">
+                            <br>
+                            <button type="submit" class="btn btn-outline-dark formSpacing" id="submit">Submit</button>
+                        </div>
                     </div>
                 </div>
+            </div>
+            <div class="col-6 openAlign">
+                <button type="button" class="btn btn-outline-dark openSpacing QsetButton" id="firstQset" disabled>First Option</button>
+                <br>
+                <button type="button" class="btn btn-outline-dark openSpacing QsetButton" id="secondQset" disabled>Second Option</button>
+                <br>
+                <button type="button" class="btn btn-outline-dark openSpacing QsetButton" id="thirdQset" disabled>Third Option</button>
             </div>
         </div>
     </div>
