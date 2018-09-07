@@ -1,4 +1,4 @@
-h1, h3, h2{
+h1, h3, h2, h4{
     text-align:center;
 }
 
@@ -48,6 +48,9 @@ h2{
     display: none;
 }
 
+#finalScreen{
+    display: none;
+}
 .openSpacing{
     margin: 5px;
 }
@@ -58,4 +61,8 @@ h2{
 
 .openAlign{
     text-align: center;
+}
+
+.tabSet{
+    width: 100px;
 }

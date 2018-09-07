@@ -10,6 +10,13 @@ $(document).ready(function(){
     var submit = false;
     var firstName = "";
     var lastName = "";
+    var randomSlot = [2,3,4,5,6,7,8,9,10,11];
+    var pickedQuestion = 1;
+    var randomSlotPicker = 0;
+    function randomObjSlot(){
+        randomSlotPicker = Math.floor(Math.random()*randomSlot.length);
+        pickedQuestion = randomSlot[randomSlotPicker];
+    }
     var questionSets = {
         firstQset:[
             "The world of the Lord of the Rings",
@@ -348,23 +355,26 @@ $(document).ready(function(){
 
     function fillInQuestion() {
         if(questionNumber === 12){
-            console.log("finished");
-            stop();
-            $("#questionWorkingArea").hide();
-            $("#finalScreen").show();
+            endGame();
             return;
         }
-        $("#question").html(questionSets[chosenQuestionSet][questionNumber].question);
-        $("#answerText0").html(questionSets[chosenQuestionSet][questionNumber].a1);
-        $("#first").attr("value", questionSets[chosenQuestionSet][questionNumber].a1);
-        $("#answerText1").html(questionSets[chosenQuestionSet][questionNumber].a2);
-        $("#second").attr("value", questionSets[chosenQuestionSet][questionNumber].a2);
-        $("#answerText2").html(questionSets[chosenQuestionSet][questionNumber].a3);
-        $("#third").attr("value", questionSets[chosenQuestionSet][questionNumber].a3);
-        $("#answerText3").html(questionSets[chosenQuestionSet][questionNumber].a4);
-        $("#fourth").attr("value", questionSets[chosenQuestionSet][questionNumber].a4);
-        timeRemaining = questionSets[chosenQuestionSet][questionNumber].time;
+        if(questionNumber > 1){
+            randomObjSlot();
+        }
+        $("#question").html(questionSets[chosenQuestionSet][pickedQuestion].question);
+        $("#answerText0").html(questionSets[chosenQuestionSet][pickedQuestion].a1);
+        $("#first").attr("value", questionSets[chosenQuestionSet][pickedQuestion].a1);
+        $("#answerText1").html(questionSets[chosenQuestionSet][pickedQuestion].a2);
+        $("#second").attr("value", questionSets[chosenQuestionSet][pickedQuestion].a2);
+        $("#answerText2").html(questionSets[chosenQuestionSet][pickedQuestion].a3);
+        $("#third").attr("value", questionSets[chosenQuestionSet][pickedQuestion].a3);
+        $("#answerText3").html(questionSets[chosenQuestionSet][pickedQuestion].a4);
+        $("#fourth").attr("value", questionSets[chosenQuestionSet][pickedQuestion].a4);
+        timeRemaining = questionSets[chosenQuestionSet][pickedQuestion].time;
         run();
+        if(questionNumber > 1){
+            randomSlot.splice(randomSlotPicker, 1);
+        };
         questionNumber++;
     }
     
@@ -397,27 +407,24 @@ $(document).ready(function(){
             score++;
             if (score < 10) {
                 var scoreUpdate = "0" + score;
-                $("#score").text(scoreUpdate);
-                console.log(scoreUpdate);
+                $(".score").text(scoreUpdate);
             }else{
-                $("#score").text(score);
+                $(".score").text(score);
             }
             if (questionNumber-1 < 10) {
                 var possibleUpdate = "0" + (questionNumber-1);
-                console.log(possibleUpdate);
-                $("#possible").text(possibleUpdate);
+                $(".possible").text(possibleUpdate);
             }else{
-                $("#possible").text(questionNumber-1);
+                $(".possible").text(questionNumber-1);
             }
             fillInQuestion();
             answerBool = false;
         }else{
             if (questionNumber-1 < 10) {
                 var possibleUpdate = "0" + (questionNumber-1);
-                console.log(possibleUpdate);
-                $("#possible").text(possibleUpdate);
+                $(".possible").text(possibleUpdate);
             }else{
-                $("#possible").text(questionNumber-1);
+                $(".possible").text(questionNumber-1);
             };
             fillInQuestion();
         }
@@ -425,7 +432,7 @@ $(document).ready(function(){
 
     function answerTest(input){
         stop();
-        if(input === questionSets[chosenQuestionSet][questionNumber-1].answer){
+        if(input === questionSets[chosenQuestionSet][pickedQuestion].answer){
             answerBool = true;
         }
         updateScore();
@@ -441,5 +448,22 @@ $(document).ready(function(){
         });
     });
     
+    function endGame(){
+        stop();
+        $("#questionWorkingArea").hide();
+        var working = "";
+        if(score === 0){
+            working ="Were you even paying attention "+ firstName+ "?" 
+        }else if(score < 5){
+            working = "Sorry " + firstName+ " better luck next time!"
+        }else if(score < 11){
+            working =  "So close..........."
+        }else{
+            working = "Perfect!"
+        }
+        $("#finalScreenTitle").text(working);
+        $("#finalScreen").show();
+        return;
+    }
 
 })

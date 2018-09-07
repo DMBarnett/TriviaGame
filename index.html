@@ -69,12 +69,12 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <td>
+                            <td class="tabSet">
                                 <div class="radio">
                                     <label><input type="radio" id='first' name="answerBox" class="answerRadio" value="foofighters"></label>
                                 </div>
                             </td>
-                            <th scope="row">1.</th>
+                            <th class="tabSet" scope="row">1.</th>
                             <td id="answerText0">Choice here</td>
                         </tr>
                         <tr>
@@ -113,9 +113,19 @@
                         <h2>Time remaining: 00:<span id="display">00</span></h2>
                     </div>
                     <div class="col-12">
-                        <h2>Score: <span id="score">00</span>/<span id="possible">00</span></h2>
+                        <h2>Score: <span class="score">00</span>/<span class="possible">00</span></h2>
                     </div>
                 </div>
+            </div>
+        </div>
+    </div>
+    <div class="container" id="finalScreen">
+        <div class="row">
+            <div class="col-12">
+                <h2 id="finalScreenTitle">Filler Text</h3>
+            </div>
+            <div class="col-12">
+                <h4 id="finalScreenScore">Score: <span class="score">00</span>/<span class="possible">00</span></h3>
             </div>
         </div>
     </div>
