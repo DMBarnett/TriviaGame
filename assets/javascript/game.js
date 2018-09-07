@@ -45,7 +45,7 @@ $(document).ready(function(){
                 a3:"Gandalf the Grey",
                 a4:"Mithrandir",
                 answer: "Mithrandir",
-                time:8
+                time:12
             },
             {
                 question:"According to the Movies, in which film does Aragorn recieve Anduil?",
@@ -54,7 +54,7 @@ $(document).ready(function(){
                 a3:"The Return of the King",
                 a4:"The Hobbit",
                 answer: "The Return of the King",
-                time:8
+                time:15
             },
             {
                 question:"Who becomes king of Rohan after Theoden dies on Pelennor Fields?",
@@ -63,7 +63,7 @@ $(document).ready(function(){
                 a3:"Aragorn",
                 a4:"Eomer",
                 answer: "Eomer",
-                time:8
+                time:19
             },
             {
                 question:"What is the name of Aragorn's ring, the Ring of ?",
@@ -72,7 +72,7 @@ $(document).ready(function(){
                 a3:"Nenya",
                 a4:"Vilya",
                 answer: "Barahir",
-                time:8
+                time:13
             },
             {
                 question:"What three swords were found in the Trolls Cave in The Hobbit?",
@@ -81,7 +81,7 @@ $(document).ready(function(){
                 a3:"Sting, Anduil and The White Knife of Legolas",
                 a4:"Aeglos, Orcrist and Sting",
                 answer: "Orcrist, Sting and Glamdring",
-                time:8
+                time:10
             },
             {
                 question:"What gift did Galadriel's gift to Legolas?",
@@ -90,7 +90,7 @@ $(document).ready(function(){
                 a3:"The Bow of the Galadhrim and Lorien Arrows",
                 a4:"Elven Rope",
                 answer: "The Bow of the Galadhrim and Lorien Arrows",
-                time:8
+                time:11
             },
             {
                 question:"How many wizards were there in Middle-Earth?",
@@ -99,7 +99,7 @@ $(document).ready(function(){
                 a3:"Five",
                 a4:"Seven",
                 answer: "Five",
-                time:8
+                time:14
             },
             {
                 question:"From whom did Elrond recieve his ring of power?",
@@ -108,7 +108,7 @@ $(document).ready(function(){
                 a3:"Luthien",
                 a4:"Aragorn I",
                 answer: "Gil Galad",
-                time:8
+                time:15
             },
             {
                 question:"Who is the proprietor of the Prancing Pony?",
@@ -117,7 +117,7 @@ $(document).ready(function(){
                 a3:"Tom Pickthorn",
                 a4:"Forlong the Fat",
                 answer: "Barliman Butterbur",
-                time:8
+                time:21
             },
         ],
         secondQset: [
@@ -138,7 +138,7 @@ $(document).ready(function(){
                 a3:"Santa Maria",
                 a4:"Yorktown",
                 answer: "Yorktown",
-                time:10 
+                time:18 
             },
             {
                 question:"Who was the first actor to play a member of all three of the major alien races in Star Trek?",
@@ -147,7 +147,7 @@ $(document).ready(function(){
                 a3:"Adam West",
                 a4:"Mark Lenard",
                 answer: "Mark Lenard",
-                time:10  
+                time:19  
             },
             {
                 question:"What is Sulu's primary position on the U.S.S. Enterprise?",
@@ -156,7 +156,7 @@ $(document).ready(function(){
                 a3:"Gunner",
                 a4:"Engineer",
                 answer: "Helmsman",
-                time:10  
+                time:17
             },
             {
                 question:"In the show, which Star Trek captain has an artificial heart?",
@@ -165,7 +165,7 @@ $(document).ready(function(){
                 a3:"Kathryn Janeway",
                 a4:"Jonathan Archer",
                 answer: "Jean-Luc Picard",
-                time:10
+                time:16
             },
             {
                 question:"Who was the first Vulcan science officer aboard the starship Enterprise?",
@@ -174,7 +174,7 @@ $(document).ready(function(){
                 a3:"T'Pol",
                 a4:"Tuvok",
                 answer: "T'Pol",
-                time:10  
+                time:15
             },
             {
                 question:"Which alien race did Ronald Reagan say reminded him of Congress?",
@@ -183,7 +183,7 @@ $(document).ready(function(){
                 a3:"Vulcans",
                 a4:"Ferengi",
                 answer: "Klingons",
-                time:10  
+                time:16  
             },
             {
                 question:"Which species was the first to discover warp drive?",
@@ -192,7 +192,7 @@ $(document).ready(function(){
                 a3:"Borg",
                 a4:"Klingons",
                 answer: "Vulcans",
-                time:10  
+                time:17
             },
             {
                 question:"What Star Trek character was labeled 'unknown sample' when discovered by Bajoran scientists?",
@@ -201,7 +201,7 @@ $(document).ready(function(){
                 a3:"Spock",
                 a4:"Odo",
                 answer: "Odo",
-                time:10  
+                time:16 
             },
             {
                 question:"Which Star Trek actor originally devised the Klingon language?",
@@ -210,7 +210,7 @@ $(document).ready(function(){
                 a3:"Mark Lenard",
                 a4:"William Shatner",
                 answer: "James Doohan",
-                time:10
+                time:19
             },
             {
                 question:"What character was adopted by the Vulcan ambassador Sarek?",
@@ -219,7 +219,7 @@ $(document).ready(function(){
                 a3:"Michael Burnham",
                 a4:"Montgomery Scott",
                 answer: "Michael Burnham",
-                time:10  
+                time:20
             },
         ],
         thirdQset:[
@@ -234,94 +234,94 @@ $(document).ready(function(){
                 time:10
             },
             {
-                question:"Who killed Roger Rabbit?",
-                a1:"Col. Mustard",
-                a2:"Scarlet",
-                a3:"Bugs Bunny",
-                a4:"Quantum entanglement",
-                answer: "42",
-                time:10 
+                question:"Which of these is a First Founding Legion?",
+                a1:"Violators",
+                a2:"Alpha Legion",
+                a3:"Sons of Malice",
+                a4:"Red Corsairs",
+                answer: "Alpha Legion",
+                time:12 
             },
             {
-                question:"",
-                a1:"",
-                a2:"",
-                a3:"",
-                a4:"",
-                answer: "",
+                question:"Who resides on the demon world Medrengard?",
+                a1:"Abaddon",
+                a2:"Fabius Bile",
+                a3:"Angron",
+                a4:"Perturabo",
+                answer: "Perturabo",
+                time:13
+            },
+            {
+                question:"Which force travels aboard Terminus Est?",
+                a1:"World Eaters",
+                a2:"Emperors Children",
+                a3:"Death Guard",
+                a4:"Black Legion",
+                answer: "Death Guard",
+                time:14
+            },
+            {
+                question:"Who allegedly began the Gothic War?",
+                a1:"The Deceiver",
+                a2:"Eldrad Ulthuan",
+                a3:"Nightbringer",
+                a4:"Abaddon the Despoiler",
+                answer: "The Deceiver",
                 time:10  
             },
             {
-                question:"",
-                a1:"",
-                a2:"",
-                a3:"",
-                a4:"",
-                answer: "",
-                time:10  
+                question:"What is 'The Twisting Path'?",
+                a1:"A company of Chaos Marines",
+                a2:"A psychic power",
+                a3:"A warp route",
+                a4:"A prophet of Chaos",
+                answer: "A psychic power",
+                time:15
             },
             {
-                question:"",
-                a1:"",
-                a2:"",
-                a3:"",
-                a4:"",
-                answer: "",
-                time:10  
+                question:"Who was killed at the Siege of the Emperors Palace, only to be resurected to kill forever?",
+                a1:"Kharn the Betrayer",
+                a2:"Lucius the Eternal",
+                a3:"Alpharius",
+                a4:"Fabius Bile",
+                answer: "Kharn the Betrayer",
+                time:18 
             },
             {
-                question:"",
-                a1:"",
-                a2:"",
-                a3:"",
-                a4:"",
-                answer: "",
-                time:10  
+                question:"Angron was the first leader to invade which Imperial Planet?",
+                a1:"Medusa V",
+                a2:"Cadia",
+                a3:"Terra",
+                a4:"Armageddon",
+                answer: "Armageddon",
+                time:12
             },
             {
-                question:"",
-                a1:"",
-                a2:"",
-                a3:"",
-                a4:"",
-                answer: "",
-                time:10  
+                question:"Who was captured by the Dark Angels and escaped 'The Rock' during the Eye of Terror Campaign?",
+                a1:"Colenius",
+                a2:"Cypher",
+                a3:"Alpharius",
+                a4:"Fabius",
+                answer: "Cypher",
+                time:11
             },
             {
-                question:"",
-                a1:"",
-                a2:"",
-                a3:"",
-                a4:"",
-                answer: "",
-                time:10  
+                question:"How many First Founding Legions were there originally?",
+                a1:"10",
+                a2:"15",
+                a3:"20",
+                a4:"25",
+                answer: "20",
+                time:14 
             },
             {
-                question:"",
-                a1:"",
-                a2:"",
-                a3:"",
-                a4:"",
-                answer: "",
-                time:10  
-            },
-            {
-                question:"",
-                a1:"",
-                a2:"",
-                a3:"",
-                a4:"",
-                answer: "",
-                time:10  
-            },
-            {
-                question:"",
-                a1:"",
-                a2:"",
-                a3:"",
-                a4:"",
-                answer: "",
-                time:10  
+                question:"Who of the following is a famous Inquisitor?",
+                a1:"Gregor Eisenhorn",
+                a2:"Ibram Gaunt",
+                a3:"Horus Lupercal",
+                a4:"Rogal Dorn",
+                answer: "Gregor Eisenhorn",
+                time:16 
             },
         ],    
     }
